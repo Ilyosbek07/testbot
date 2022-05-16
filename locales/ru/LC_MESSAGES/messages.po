@@ -1,0 +1,213 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-04-20 16:29+0500\n"
+"PO-Revision-Date: 2022-04-20 16:09+0500\n"
+"Last-Translator: \n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: data/data.py:4
+msgid "Ortga"
+msgstr "Назад"
+
+#: data/data.py:5
+msgid "Iltimos faqat son kiriting"
+msgstr "Пожалуйста, отправляйте только числовые значения"
+
+#: handlers/users/buttons/about_us.py:10
+msgid "DTM bot"
+msgstr "DTM bot"
+
+#: handlers/users/buttons/back.py:16 handlers/users/buttons/home.py:12
+#: handlers/users/commands/start.py:32
+#: handlers/users/query_handlers/language.py:26
+#: handlers/users/query_handlers/pay_type.py:26
+#: handlers/users/query_handlers/pay_type.py:54
+msgid "Asosiy menu"
+msgstr "Главное меню"
+
+#: handlers/users/buttons/back.py:25 handlers/users/buttons/back.py:47
+#: handlers/users/buttons/cabinet.py:14 handlers/users/buttons/tests.py:11
+msgid "Kerakli punktni tanlang"
+msgstr "Выберите необходимый пункт"
+
+#: handlers/users/buttons/back.py:38 handlers/users/buttons/free_test.py:18
+#: handlers/users/buttons/pay_test.py:20
+msgid "Test tilini tanlang"
+msgstr "Выберите язык тестирования"
+
+#: handlers/users/buttons/cabinet.py:28
+msgid "Kerakli tilni tanlang"
+msgstr "Выберите необходимый язык"
+
+#: handlers/users/buttons/history.py:15
+msgid "Siz hali test yechmadingiz"
+msgstr "Вы еще не решали тестов"
+
+#: handlers/users/buttons/result_check.py:28
+#: handlers/users/buttons/result_check.py:34 keyboards/default/test_type.py:8
+#: keyboards/default/test_type_check.py:8
+msgid "💰 Pullik testlar"
+msgstr "💰 Платные тесты"
+
+#: handlers/users/buttons/result_check.py:28
+#: handlers/users/buttons/result_check.py:36 keyboards/default/test_type.py:9
+#: keyboards/default/test_type_check.py:9
+msgid "🆓 Bepul testlar"
+msgstr "🆓 Бесплатные тесты"
+
+#: handlers/users/buttons/result_check.py:30
+#: handlers/users/buttons/select_language.py:17
+msgid "Iltimos faqat tugmalar yordamida kiriting"
+msgstr "Пожалуйста, выбирайте только с помощью кнопок"
+
+#: handlers/users/buttons/result_check.py:39
+msgid "Kitob raqamini kiriting"
+msgstr "Введите номер книги"
+
+#: handlers/users/buttons/result_check.py:41
+#: handlers/users/buttons/select_language.py:14
+#: keyboards/default/directions.py:13 keyboards/default/language.py:13
+#: keyboards/default/test_type.py:13 keyboards/default/test_type_check.py:15
+msgid "◀️ Ortga"
+msgstr "◀️ Назад"
+
+#: handlers/users/buttons/result_check.py:57
+#: handlers/users/buttons/select_direction.py:25
+#: handlers/users/query_handlers/pay_type.py:20
+#: handlers/users/query_handlers/pay_type.py:48
+msgid "Siz kiritgan sozlamalar boyicha xali test mavjud emas"
+msgstr "По выбранным вами критериям тесты еще не доступны"
+
+#: handlers/users/buttons/result_check.py:78
+#: handlers/users/query_handlers/answer_handler.py:48
+#: handlers/users/query_handlers/delete_all.py:47
+#: handlers/users/query_handlers/delete_all.py:93
+#: handlers/users/query_handlers/next_answer_handlers.py:56
+#: handlers/users/query_handlers/pagination.py:58
+#: handlers/users/query_handlers/reset_handler.py:50
+#: handlers/users/query_handlers/reset_next_handler.py:59
+msgid "Barchasini o'chirish"
+msgstr "Очистить все"
+
+#: handlers/users/buttons/result_check.py:81
+#: handlers/users/query_handlers/answer_handler.py:51
+#: handlers/users/query_handlers/delete_all.py:50
+#: handlers/users/query_handlers/delete_all.py:96
+#: handlers/users/query_handlers/next_answer_handlers.py:59
+#: handlers/users/query_handlers/pagination.py:61
+#: handlers/users/query_handlers/reset_handler.py:53
+#: handlers/users/query_handlers/reset_next_handler.py:62
+msgid "Natijalarni yuborish"
+msgstr "Отправить результаты"
+
+#: handlers/users/buttons/result_check.py:84
+#: handlers/users/query_handlers/answer_handler.py:56
+#: handlers/users/query_handlers/pagination.py:96
+#: handlers/users/query_handlers/reset_handler.py:58
+msgid "Keyingi saxifa"
+msgstr "Следующая страница"
+
+#: handlers/users/buttons/result_check.py:87
+msgid "Quyidagi testlarga javob berib, \"Natijalarni yuborish\" tugmasini bosing"
+msgstr "Ответьте на тесты ниже и нажмите кнопку «Отправить результаты»"
+
+#: handlers/users/buttons/select_direction.py:42
+msgid "Kerakli fanlarni tanlang"
+msgstr "Выберите необходимые предметы"
+
+#: handlers/users/buttons/select_direction.py:43
+msgid "Fanlar"
+msgstr "Предметы"
+
+#: handlers/users/buttons/select_direction.py:86
+msgid "To'lov turini tanlang"
+msgstr "Выберите способ оплаты"
+
+#: handlers/users/buttons/select_language.py:23
+msgid "Yo'nalishni tanlang"
+msgstr "Выберите направление"
+
+#: handlers/users/commands/start.py:27
+msgid "Assalomu Alaykum, xush kelibsiz!"
+msgstr "Здравствуйте, добро пожаловать!"
+
+#: handlers/users/query_handlers/check_test.py:42
+msgid ""
+"\n"
+"To'g'ri javoblar soni: {right}\n"
+"Noto'g'ri javoblar soni: {wrong}"
+msgstr ""
+"\n"
+"Количество правильных ответов: {right}\n"
+"Количество неправильных ответов: {wrong}"
+
+#: handlers/users/query_handlers/delete_all.py:85
+#: handlers/users/query_handlers/next_answer_handlers.py:48
+#: handlers/users/query_handlers/pagination.py:50
+#: handlers/users/query_handlers/reset_next_handler.py:51
+msgid "Oldingi saxifa"
+msgstr "Предыдущая страница"
+
+#: keyboards/default/cabinet_keyboard.py:8
+msgid "🌐 Tilni o'zgartirish"
+msgstr "🌐 Изменить язык"
+
+#: keyboards/default/cabinet_keyboard.py:9
+msgid "📄 Qo'llanma"
+msgstr "📄 Руководство"
+
+#: keyboards/default/directions.py:10 keyboards/default/language.py:10
+#: keyboards/default/test_type_check.py:12
+msgid "🏠 Asosiy menu"
+msgstr "🏠 Главное меню"
+
+#: keyboards/default/main_menu.py:8
+msgid "🧾 Testlar"
+msgstr "🧾 Тесты"
+
+#: keyboards/default/main_menu.py:9
+msgid "👤 Kabinet"
+msgstr "👤 Кабинет"
+
+#: keyboards/default/main_menu.py:10
+msgid "ℹ️ Biz haqimizda"
+msgstr "ℹ️ О нас"
+
+#: keyboards/default/main_menu.py:11
+msgid "🕓 Natijalar tarixi"
+msgstr "🕓 История результатов"
+
+#: keyboards/default/test_type.py:10
+msgid "🔍 Natijani bilish"
+msgstr "🔍 Узнать результаты"
+
+#: middlewares/throttling.py:37
+msgid "Judaxam ko'p so'rov, iltimos keyinroq urinib koring!"
+msgstr "Слишком много запросов попробуйте позже!"
+
+#~ msgid "Yangi test boshlash"
+#~ msgstr "Начать новый тест"
+
+#~ msgid ""
+#~ "Sizda tugallanmagan test mavjud, to'liq "
+#~ "statistikani ko'rish uchun testni oxirigacha"
+#~ " bajaring, yoki yangi test boshlang"
+#~ msgstr ""
+#~ "У вас есть незаконченный тест, для "
+#~ "полной статистики решите тесты доконца, "
+#~ "или начните новый"
+

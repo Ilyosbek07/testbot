@@ -1,0 +1,6 @@
+aiogram<3.0
+environs~=8.0.0
+Django~=4.0.3
+asgiref~=3.4.1
+SQLAlchemy~=1.4.32
+openpyxl~=3.0.9
