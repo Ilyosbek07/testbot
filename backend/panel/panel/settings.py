@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # sys.path.append(r"C:\Users\uicode\PycharmProjects\dtmbot")
-
+from decouple import config
 BASE_DIR = Path(__file__).resolve().parent.parent
 print(BASE_DIR)
 
@@ -22,12 +22,12 @@ print(BASE_DIR)
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-cfsrdbt-j&uo!e-76pd57d_mnd506)ku87257-37o&(+()ug8-'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["194.233.171.42", "127.0.0.1"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -79,14 +79,13 @@ WSGI_APPLICATION = 'panel.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "postgres",
-        'USER': "",
-        'PASSWORD': "",
-        'HOST': "localhost",
-        'PORT': "5432"
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASS'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
