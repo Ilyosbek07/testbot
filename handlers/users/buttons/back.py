@@ -1,13 +1,14 @@
 from aiogram.dispatcher.filters import Text
 
 from keyboards.default import main_menu, test_type, language
-from loader import dp, __, _
+from loader import dp, __, _, bot
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 
 from service.repo.language_repo import LanguageRepo
 from service.repo.repository import SQLAlchemyRepos
 from states import states
+from states.states import CheckResult
 
 
 @dp.message_handler(Text(equals=__("◀️ Ortga")), state=states.TestForm.price)
@@ -17,6 +18,16 @@ async def back(message: types.Message, state: FSMContext):
         reply_markup=main_menu()
     )
     await state.reset_state(with_data=True)
+
+
+@dp.message_handler(Text(equals=__("◀️ Ortga")), state=CheckResult.test_id)
+async def back(message: types.Message, state: FSMContext):
+    await message.answer(
+        text=_("Asosiy menu"),
+        reply_markup=main_menu()
+    )
+    await bot.delete_message(chat_id=message.chat.id, message_id=message.message_id)
+    await state.finish()
 
 
 @dp.message_handler(Text(equals=__("◀️ Ortga")), state=states.TestForm.language)

@@ -8,3 +8,5 @@ from .pagination import dp
 from .delete_all import dp
 from .pay_type import dp
 from .reset_next_handler import dp
+from .next2_answer_handler import dp
+from .rest2_next_handler import dp

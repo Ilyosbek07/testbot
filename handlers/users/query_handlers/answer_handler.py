@@ -43,14 +43,7 @@ async def answer_handler(query: types.CallbackQuery, callback_data: dict, state:
                     )
                 )
 
-    if len(data.get('result')) == 10:
-        keyboard.add(
-            types.InlineKeyboardButton(text=_("Barchasini o'chirish"), callback_data=cb_delete_all.new(page=1))
-        )
-        keyboard.add(
-            types.InlineKeyboardButton(text=_("Natijalarni yuborish"), callback_data="send")
-        )
-    else:
+    if len(data.get('result')) == 90:
         keyboard.add(
             types.InlineKeyboardButton(
                 text=_('Keyingi saxifa'),
@@ -60,4 +53,8 @@ async def answer_handler(query: types.CallbackQuery, callback_data: dict, state:
                 )
             )
         )
+    keyboard.add(
+        types.InlineKeyboardButton(text=_("Barchasini o'chirish"), callback_data=cb_delete_all.new(page=1))
+    )
+
     await query.message.edit_reply_markup(reply_markup=keyboard)

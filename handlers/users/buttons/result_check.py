@@ -2,7 +2,7 @@ from aiogram import types
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Text
 
-from callback_datas import cb_answers, cb_test, cb_pagination
+from callback_datas import cb_answers, cb_test, cb_pagination, cb_delete_all
 from data.config import DJANGO_ROOT
 from data.data import digit_error, variants
 from keyboards.default import test_type_check
@@ -60,7 +60,7 @@ async def get_test_id(message: types.Message, repo: SQLAlchemyRepos, state: FSMC
             result = await get_excel_data(file_path=DJANGO_ROOT + data.keys)
             await state.update_data(subject_id=data.subject_id)
             keyboard = types.InlineKeyboardMarkup(row_width=5)
-            for i in range(1, 16):
+            for i in range(1, 11):
                 keyboard.insert(
                     types.InlineKeyboardButton(
                         text=str(i),
@@ -74,17 +74,12 @@ async def get_test_id(message: types.Message, repo: SQLAlchemyRepos, state: FSMC
                             callback_data=cb_answers.new(test=i, key=variant)
                         )
                     )
-            if len(result) == 10:
-                keyboard.add(
-                    types.InlineKeyboardButton(text=_("Barchasini o'chirish"), callback_data="reset")
-                )
-                keyboard.add(
-                    types.InlineKeyboardButton(text=_("Natijalarni yuborish"), callback_data="send")
-                )
-            elif len(result) < 10:
+            if len(result) == 90:
                 keyboard.add(types.InlineKeyboardButton(text=_("Keyingi saxifa"),
-                                                        callback_data=cb_pagination.new(page1=1, location1="next")))
-
+                                                        callback_data=cb_pagination.new(page=1, location="next")))
+            keyboard.add(
+                types.InlineKeyboardButton(text=_("Barchasini o'chirish"), callback_data=cb_delete_all.new(page=1))
+            )
             await message.answer(
                 text=_('Quyidagi testlarga javob berib, "Natijalarni yuborish" tugmasini bosing'),
                 reply_markup=keyboard

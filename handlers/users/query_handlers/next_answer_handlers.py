@@ -13,7 +13,8 @@ async def answer_handler(query: types.CallbackQuery, callback_data: dict, state:
     data = await state.get_data()
     keyboard = types.InlineKeyboardMarkup(row_width=5)
     result = (await state.get_data()).get('result')
-    for i in range(16, len(result) + 1):
+    for i in range(11, 21):
+    # for i in range(16, len(result) + 1):
         keyboard.add(
             types.InlineKeyboardButton(
                 text=str(i),
@@ -47,15 +48,22 @@ async def answer_handler(query: types.CallbackQuery, callback_data: dict, state:
         types.InlineKeyboardButton(
             text=_('Oldingi saxifa'),
             callback_data=cb_pagination.new(
-                page=2,
-                location="prev"
+                page=1,
+                location="prev1"
+            )
+        )
+    )
+    keyboard.add(
+        types.InlineKeyboardButton(
+            text=_('Keyingi saxifa'),
+            callback_data=cb_pagination.new(
+                page=3,
+                location="next2"
             )
         )
     )
     keyboard.add(
         types.InlineKeyboardButton(text=_("Barchasini o'chirish"), callback_data=cb_delete_all.new(page=2))
     )
-    keyboard.add(
-        types.InlineKeyboardButton(text=_("Natijalarni yuborish"), callback_data="send")
-    )
+
     await query.message.edit_reply_markup(reply_markup=keyboard)
