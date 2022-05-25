@@ -1,15 +1,15 @@
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 
-from callback_datas import cb_reset2, cb_test, cb_answers, cb_pagination, cb_delete_all, cb_answers2, cb_reset4, \
-    cb_answers4
+from callback_datas import cb_resetaa, cb_test, cb_answers, cb_pagination, cb_delete_all, cb_answersaa, cb_reset4, \
+    cb_answerscc, cb_answersbb, cb_resetbb
 from data.data import variants
 from loader import dp, _
 
 
-@dp.callback_query_handler(cb_reset2.filter())
+@dp.callback_query_handler(cb_resetbb.filter())
 async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSMContext):
-    reset_number = int(callback_data.get('test_id'))
+    reset_number = int(callback_data.get('test_idbb'))
     async with state.proxy() as data:
         data['answers'].pop(reset_number)
     keyboard = types.InlineKeyboardMarkup(row_width=5)
@@ -26,13 +26,13 @@ async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSM
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text="🔘" + variant,
-                            callback_data=cb_answers2.new(test=i, key=variant)
+                            callback_data=cb_answersbb.new(testbb=i, keybb=variant)
                         )
                     )
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text="🗑",
-                            callback_data=cb_reset2.new(test_id=str(i))
+                            callback_data=cb_resetbb.new(test_idbb=str(i))
                         )
                     )
         else:
@@ -40,7 +40,7 @@ async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSM
                 keyboard.insert(
                     types.InlineKeyboardButton(
                         text=variant,
-                        callback_data=cb_answers2.new(test=i, key=variant)
+                        callback_data=cb_answersbb.new(testbb=i, keybb=variant)
                     )
                 )
     keyboard.add(
@@ -86,13 +86,13 @@ async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSM
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text="🔘" + variant,
-                            callback_data=cb_answers4.new(test=i, key=variant)
+                            callback_data=cb_answerscc.new(testcc=i, keycc=variant)
                         )
                     )
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text="🗑",
-                            callback_data=cb_reset4.new(test_id=str(i))
+                            callback_data=cb_reset4.new(test_idcc=str(i))
                         )
                     )
         else:
@@ -100,7 +100,7 @@ async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSM
                 keyboard.insert(
                     types.InlineKeyboardButton(
                         text=variant,
-                        callback_data=cb_answers4.new(test=i, key=variant)
+                        # callback_data=cb_answers4.new(test=i, key=variant)
                     )
                 )
     keyboard.add(
@@ -127,7 +127,7 @@ async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSM
 
     await query.message.edit_reply_markup(reply_markup=keyboard)
 
-@dp.callback_query_handler(cb_reset2.filter())
+# @dp.callback_query_handler(cb_reset2.filter())
 async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSMContext):
     reset_number = int(callback_data.get('test_id'))
     async with state.proxy() as data:
@@ -146,13 +146,13 @@ async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSM
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text="🔘" + variant,
-                            callback_data=cb_answers2.new(test=i, key=variant)
+                            # callback_data=cb_answers2.new(test=i, key=variant)
                         )
                     )
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text="🗑",
-                            callback_data=cb_reset2.new(test_id=str(i))
+                            # callback_data=cb_reset2.new(test_id=str(i))
                         )
                     )
         else:
@@ -160,7 +160,7 @@ async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSM
                 keyboard.insert(
                     types.InlineKeyboardButton(
                         text=variant,
-                        callback_data=cb_answers2.new(test=i, key=variant)
+                        # callback_data=cb_answers2.new(test=i, key=variant)
                     )
                 )
     keyboard.add(
@@ -187,7 +187,7 @@ async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSM
 
     await query.message.edit_reply_markup(reply_markup=keyboard)
 
-@dp.callback_query_handler(cb_reset2.filter())
+# @dp.callback_query_handler(cb_reset2.filter())
 async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSMContext):
     reset_number = int(callback_data.get('test_id'))
     async with state.proxy() as data:
@@ -206,13 +206,13 @@ async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSM
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text="🔘" + variant,
-                            callback_data=cb_answers2.new(test=i, key=variant)
+                            # callback_data=cb_answers2.new(test=i, key=variant)
                         )
                     )
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text="🗑",
-                            callback_data=cb_reset2.new(test_id=str(i))
+                            # callback_data=cb_reset2.new(test_id=str(i))
                         )
                     )
         else:
@@ -220,7 +220,7 @@ async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSM
                 keyboard.insert(
                     types.InlineKeyboardButton(
                         text=variant,
-                        callback_data=cb_answers2.new(test=i, key=variant)
+                        # callback_data=cb_answers2.new(test=i, key=variant)
                     )
                 )
     keyboard.add(

@@ -1,15 +1,15 @@
 from data.data import variants
 from loader import dp, _
 from aiogram import types
-from callback_datas import cb_answers2, cb_test, cb_reset2, cb_pagination, cb_delete_all
+from callback_datas import cb_answersaa, cb_test, cb_resetaa, cb_pagination, cb_delete_all
 from aiogram.dispatcher import FSMContext
 
 
-@dp.callback_query_handler(cb_answers2.filter())
+@dp.callback_query_handler(cb_answersaa.filter())
 async def answer_handler(query: types.CallbackQuery, callback_data: dict, state: FSMContext):
     await query.answer()
     async with state.proxy() as data:
-        data['answers'][int(callback_data.get('test'))] = callback_data.get('key')
+        data['answers'][int(callback_data.get('testaa'))] = callback_data.get('keyaa')
     data = await state.get_data()
     keyboard = types.InlineKeyboardMarkup(row_width=5)
     result = (await state.get_data()).get('result')
@@ -27,13 +27,13 @@ async def answer_handler(query: types.CallbackQuery, callback_data: dict, state:
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text="🔘" + variant,
-                            callback_data=cb_answers2.new(test=i, key=variant)
+                            callback_data=cb_answersaa.new(testaa=i, keyaa=variant)
                         )
                     )
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text="🗑",
-                            callback_data=cb_reset2.new(test_id=str(i))
+                            callback_data=cb_resetaa.new(test_idaa=str(i))
                         )
                     )
         else:
@@ -41,7 +41,7 @@ async def answer_handler(query: types.CallbackQuery, callback_data: dict, state:
                 keyboard.insert(
                     types.InlineKeyboardButton(
                         text=variant,
-                        callback_data=cb_answers2.new(test=i, key=variant)
+                        callback_data=cb_answersaa.new(testaa=i, keyaa=variant)
                     )
                 )
     keyboard.add(

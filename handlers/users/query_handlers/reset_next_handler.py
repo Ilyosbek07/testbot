@@ -1,14 +1,14 @@
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 
-from callback_datas import cb_reset2, cb_test, cb_answers, cb_pagination, cb_delete_all, cb_answers2
+from callback_datas import cb_resetaa, cb_test, cb_answers, cb_pagination, cb_delete_all, cb_answersaa
 from data.data import variants
 from loader import dp, _
 
 
-@dp.callback_query_handler(cb_reset2.filter())
+@dp.callback_query_handler(cb_resetaa.filter())
 async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSMContext):
-    reset_number = int(callback_data.get('test_id'))
+    reset_number = int(callback_data.get('test_idaa'))
     async with state.proxy() as data:
         data['answers'].pop(reset_number)
     keyboard = types.InlineKeyboardMarkup(row_width=5)
@@ -25,13 +25,13 @@ async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSM
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text="🔘" + variant,
-                            callback_data=cb_answers2.new(test=i, key=variant)
+                            callback_data=cb_answersaa.new(testaa=i, keyaa=variant)
                         )
                     )
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text="🗑",
-                            callback_data=cb_reset2.new(test_id=str(i))
+                            callback_data=cb_resetaa.new(test_idaa=str(i))
                         )
                     )
         else:
@@ -39,7 +39,7 @@ async def reset_test(query: types.CallbackQuery, callback_data: dict, state: FSM
                 keyboard.insert(
                     types.InlineKeyboardButton(
                         text=variant,
-                        callback_data=cb_answers2.new(test=i, key=variant)
+                        callback_data=cb_answersaa.new(testaa=i, keyaa=variant)
                     )
                 )
     keyboard.add(
