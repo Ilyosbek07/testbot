@@ -3,7 +3,8 @@ from aiogram.dispatcher import FSMContext
 from loader import dp, _
 from aiogram import types
 from callback_datas import cb_pagination, cb_test, cb_answersaa, cb_reset, cb_answers, cb_delete_all, cb_pagination2, \
-    cb_resetaa, cb_answersaa, cb_resetaa, cb_reset4, cb_answerscc, cb_answersbb, cb_resetbb
+    cb_resetaa, cb_answersaa, cb_resetaa, cb_answerscc, cb_answersbb, cb_resetbb, cb_resetcc, cb_resetdd, \
+    cb_answersdd, cb_resetee, cb_answersee, cb_resetff, cb_answersff
 from service.repo.repository import SQLAlchemyRepos
 
 
@@ -67,12 +68,7 @@ async def pagination_handler(query: types.CallbackQuery, callback_data: dict, st
         keyboard.add(
             types.InlineKeyboardButton(text=_("Barchasini o'chirish"), callback_data=cb_delete_all.new(page=2))
         )
-        # keyboard.add(
-        #     types.InlineKeyboardButton(text=_("Barchasini o'chirish"), callback_data=cb_delete_all.new(page=2))
-        # )
-        # keyboard.add(
-        #     types.InlineKeyboardButton(text=_("Natijalarni yuborish"), callback_data="send")
-        # )
+
     elif location == "prev1":
         for i in range(1, 11):
             keyboard.add(
@@ -182,13 +178,13 @@ async def pagination_handler(query: types.CallbackQuery, callback_data: dict, st
                         keyboard.insert(
                             types.InlineKeyboardButton(
                                 text="🔘" + variant,
-                                callback_data=cb_answers4.new(test=i, key=variant)
+                                callback_data=cb_answerscc.new(testcc=i, keycc=variant)
                             )
                         )
                         keyboard.insert(
                             types.InlineKeyboardButton(
                                 text="🗑",
-                                callback_data=cb_reset4.new(test_id=str(i))
+                                callback_data=cb_resetcc.new(test_idcc=str(i))
                             )
                         )
             else:
@@ -196,7 +192,7 @@ async def pagination_handler(query: types.CallbackQuery, callback_data: dict, st
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text=variant,
-                            callback_data=cb_answers4.new(test=i, key=variant)
+                            callback_data=cb_answerscc.new(testcc=i, keycc=variant)
                         )
                     )
         keyboard.add(
@@ -234,13 +230,13 @@ async def pagination_handler(query: types.CallbackQuery, callback_data: dict, st
                         keyboard.insert(
                             types.InlineKeyboardButton(
                                 text="🔘" + variant,
-                                callback_data=cb_answers.new(test=i, key=variant)
+                                callback_data=cb_answersdd.new(testdd=i, keydd=variant)
                             )
                         )
                         keyboard.insert(
                             types.InlineKeyboardButton(
                                 text="🗑",
-                                callback_data=cb_reset.new(test_id=str(i))
+                                callback_data=cb_resetdd.new(test_iddd=str(i))
                             )
                         )
             else:
@@ -248,7 +244,7 @@ async def pagination_handler(query: types.CallbackQuery, callback_data: dict, st
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text=variant,
-                            callback_data=cb_answers.new(test=i, key=variant)
+                            callback_data=cb_answersdd.new(testdd=i, keydd=variant)
                         )
                     )
         keyboard.add(
@@ -286,13 +282,13 @@ async def pagination_handler(query: types.CallbackQuery, callback_data: dict, st
                         keyboard.insert(
                             types.InlineKeyboardButton(
                                 text="🔘" + variant,
-                                callback_data=cb_answers.new(test=i, key=variant)
+                                callback_data=cb_answersee.new(testee=i, keyee=variant)
                             )
                         )
                         keyboard.insert(
                             types.InlineKeyboardButton(
                                 text="🗑",
-                                callback_data=cb_reset.new(test_id=str(i))
+                                callback_data=cb_resetee.new(test_idee=str(i))
                             )
                         )
             else:
@@ -300,7 +296,7 @@ async def pagination_handler(query: types.CallbackQuery, callback_data: dict, st
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text=variant,
-                            callback_data=cb_answers.new(test=i, key=variant)
+                            callback_data=cb_answersee.new(testee=i, keyee=variant)
                         )
                     )
         keyboard.add(
@@ -338,13 +334,13 @@ async def pagination_handler(query: types.CallbackQuery, callback_data: dict, st
                         keyboard.insert(
                             types.InlineKeyboardButton(
                                 text="🔘" + variant,
-                                callback_data=cb_answers.new(test=i, key=variant)
+                                callback_data=cb_answersff.new(testff=i, keyff=variant)
                             )
                         )
                         keyboard.insert(
                             types.InlineKeyboardButton(
                                 text="🗑",
-                                callback_data=cb_reset.new(test_id=str(i))
+                                callback_data=cb_resetff.new(test_idff=str(i))
                             )
                         )
             else:
@@ -352,7 +348,7 @@ async def pagination_handler(query: types.CallbackQuery, callback_data: dict, st
                     keyboard.insert(
                         types.InlineKeyboardButton(
                             text=variant,
-                            callback_data=cb_answers.new(test=i, key=variant)
+                            callback_data=cb_answersff.new(testff=i, keyff=variant)
                         )
                     )
         keyboard.add(
@@ -363,9 +359,6 @@ async def pagination_handler(query: types.CallbackQuery, callback_data: dict, st
                     location="next5"
                 )
             )
-        )
-        keyboard.add(
-            types.InlineKeyboardButton(text=_("Barchasini o'chirish"), callback_data=cb_delete_all.new(page=7))
         )
         keyboard.add(
             types.InlineKeyboardButton(text=_("Barchasini o'chirish"), callback_data=cb_delete_all.new(page=2))

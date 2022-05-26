@@ -20,7 +20,7 @@ async def back(message: types.Message, state: FSMContext):
     await state.reset_state(with_data=True)
 
 
-@dp.message_handler(Text(equals=__("◀️ Ortga")), state=CheckResult.test_id)
+@dp.message_handler(Text(equals=__("◀️ Bekor qilish")), state='*')
 async def back(message: types.Message, state: FSMContext):
     await message.answer(
         text=_("Asosiy menu"),

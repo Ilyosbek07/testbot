@@ -81,7 +81,8 @@ async def get_test_id(message: types.Message, repo: SQLAlchemyRepos, state: FSMC
                 types.InlineKeyboardButton(text=_("Barchasini o'chirish"), callback_data=cb_delete_all.new(page=1))
             )
             await message.answer(
-                text=_('Quyidagi testlarga javob berib, "Natijalarni yuborish" tugmasini bosing'),
+                text=_('Quyidagi testlarga javob berib, "Natijalarni yuborish" tugmasini bosing'
+                       '( "/back" bekor qilish )'),
                 reply_markup=keyboard
             )
             await state.reset_state(with_data=False)
