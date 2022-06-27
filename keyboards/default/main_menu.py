@@ -9,6 +9,7 @@ def main_menu(**kwargs) -> types.ReplyKeyboardMarkup:
         types.KeyboardButton(text=_("👤 Kabinet", locale=kwargs.get('locale'))),
         types.KeyboardButton(text=_("ℹ️ Biz haqimizda", locale=kwargs.get('locale'))),
         types.KeyboardButton(text=_("🕓 Natijalar tarixi", locale=kwargs.get('locale'))),
+        types.KeyboardButton(text=_("📄 Qo\'llanma", locale=kwargs.get('locale'))),
     )
 
     return keyboard
