@@ -31,3 +31,9 @@ async def change_lang(message: types.Message, repo: SQLAlchemyRepos):
         text=_("Kerakli tilni tanlang"),
         reply_markup=language(languages=languages)
     )
+    
+    
+@dp.message_handler(Text(equals=__("◀️  Ortga")))
+async def change_lang(message: types.Message):
+    await message.answer(text='Asosiy menu', reply_markup=main_menu())
+
