@@ -7,5 +7,7 @@ def cabinet_keyboard():
     keyboard.add(
         types.KeyboardButton(text=_('🌐 Tilni o\'zgartirish')),
         types.KeyboardButton(text=_('📄 Qo\'llanma')),
+        types.KeyboardButton(text=_('◀️  Ortga')),
+
     )
     return keyboard
