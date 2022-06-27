@@ -1,6 +1,6 @@
 from aiogram.dispatcher import FSMContext
 
-from keyboards.default import cabinet_keyboard
+from keyboards.default import cabinet_keyboard, main_menu
 from keyboards.inline import language
 from loader import dp, _, __
 from aiogram import types
